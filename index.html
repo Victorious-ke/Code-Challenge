@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Payroll Calculator</title>
+</head>
+
+<body>
+  <main>
+    <h1 id="brand">payroll</h1>
+    <h1 id="def">NET PAY CALCULATOR</h1>
+    <p>Enter the gross salary below amount to calculate your net amount</p>
+    <div id="input">
+      <form id="my_form">
+        <label for="basic_salary">Basic Salary</label>
+        <input type="number" />
+        <label for="benefits">Benefits</label>
+        <input type="number" />
+        <input type="submit" value="calculate">
+      </form>
+    </div>
+    <div id="output">
+      <table id="my_table" border="1">
+        <tr>
+          <th>Description</th>
+          <th>Result</th>
+        </tr>
+        <tr>
+          <td>Gross Salary</td>
+          <td id="gross"></td>
+        </tr>
+        <tr>
+          <td>NSSF</td>
+          <td id="nssf"></td>
+        </tr>
+        <tr>
+          <td>NHDF</td>
+          <td id="nhdf"></td>
+        </tr>
+        <tr>
+          <td>Taxable Income</td>
+          <td id="taxable_income"></td>
+        </tr>
+        <tr>
+          <td>Final payee</td>
+          <td id="final_payee"></td>
+        </tr>
+        <tr>
+          <td>SHA</td>
+          <td id="sha"></td>
+        </tr>
+        <tr>
+          <td>Net Pay</td>
+          <td id="net_pay"></td>
+        </tr>
+      </table>
+    </div>
+    <div id="salary-records">
+      <h2>Saved Salary Records</h2>
+      <ul id="recordsList"></ul>
+    </div>
+
+  </main>
+  <script src="index.js"></script>
+</body>
+
+</html>

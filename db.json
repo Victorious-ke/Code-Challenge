@@ -1,0 +1,48 @@
+{
+  "salaryRecords": [
+    {
+      "id": "037f",
+      "grossSalary": 1000000,
+      "netPay": 692760.65,
+      "nssf": 1080,
+      "nhdf": 15000,
+      "paye": 289959.35,
+      "nhif": 1200
+    },
+    {
+      "id": "f0b5",
+      "grossSalary": 1000000,
+      "netPay": 692760.65,
+      "nssf": 1080,
+      "nhdf": 15000,
+      "paye": 289959.35,
+      "nhif": 1200
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "Alice",
+      "email": "alice@example.com"
+    },
+    {
+      "id": "2",
+      "name": "Brian",
+      "email": "brian@example.com"
+    }
+  ],
+  "logs": [
+    {
+      "id": "1",
+      "action": "Calculated Net Pay",
+      "user": "Alice",
+      "timestamp": "2025-07-18T12:00:01Z"
+    },
+    {
+      "id": "2",
+      "action": "Saved Record",
+      "user": "Brian",
+      "timestamp": "2025-07-18T13:00:01Z"
+    }
+  ]
+}
