@@ -14,10 +14,9 @@ Built using **HTML**, **CSS**, **JavaScript**, and a **JSON Server**
 ## Features
 
 Real-time calculation of Net Pay based on gross salary and benefits
-Automatic deduction of statutory taxes (PAYE, SHA, NSSF, NHDF)
-Display of calculation breakdown in a dynamic HTML table
-Ability to save salary records using a JSON API
-View and delete saved salary records
+Automatic deduction of statutory deductions (PAYE, SHIF, NSSF, NHDF)
+Display of calculation breakdown in a HTML table
+Ability to save salary records, view and delete saved salary records
 Responsive UI styled with CSS
 
 
@@ -36,12 +35,13 @@ README.md            # Project documentation
 HTML
 CSS
 JavaScript
-JSON Server (Mock backend API)
+JSON Server
 Fetch API (GET and POST methods)
 
 ## Setup Instructions
 1. Clone the Repository
 git clone https://github.com/Victorious-ke/Code-Challenge.git
+
 cd Code-Challenge
 
 2. Install Dependencies
