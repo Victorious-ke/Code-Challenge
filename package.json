@@ -1,22 +1,13 @@
 {
   "name": "code-challenge",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Victorious-ke/Code-Challenge.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Victorious-ke/Code-Challenge/issues"
-  },
-  "homepage": "https://github.com/Victorious-ke/Code-Challenge#readme",
-  "description": ""
+  "dependencies": {
+    "json-server": "^0.17.3"
+  }
 }
 
 
