@@ -41,8 +41,8 @@ Fetch API (GET and POST methods)
 
 ## Setup Instructions
 1. Clone the Repository
-git clone https://github.com/yourusername/paye-calculator.git
-cd paye-calculator
+git clone https://github.com/Victorious-ke/Code-Challenge.git
+cd Code-Challenge
 
 2. Install Dependencies
 npm install json-server
@@ -56,65 +56,27 @@ If deployed using Render:
 
 View Live API
 
-💡 Usage
-Enter your Basic Salary and Benefits
+## Usage
+1. Enter your Basic Salary and Benefits
+2. Click Calculate
 
-Click Calculate
-
-View the breakdown of:
-
+3. View the breakdown of:
 Gross Pay
 
 Statutory Deductions
 
 Net Pay
 
-Click Save Record to store the result
-
 View all saved records under “Salary Records”
 
-🗃 Example JSON (db.json)
-json
-Copy
-Edit
-{
-  "salaryRecords": [
-    {
-      "id": 1,
-      "basic": 50000,
-      "benefits": 10000,
-      "netPay": 42000
-    }
-  ]
-}
-✨ Future Enhancements
-User authentication for private salary records
 
-Monthly vs. yearly breakdown toggle
 
-Export to PDF or CSV
-
-Responsive mobile-first UI
-
-🧑‍💻 Author
+## Author
 Victorious-ke
 GitHub: github.com/Victorious-ke
 
-📜 License
-This project is licensed under the MIT License — feel free to use and modify it!
-
-yaml
-Copy
-Edit
-
----
-
-Let me know if you'd like to:
-- Add screenshots
-- Localize it for other countries
-- Use environment variables or build scripts
-
-Want me to generate a `db.json` starter file again too?
+## License
+This project is licensed under the MIT License 
 
 
 
@@ -122,5 +84,7 @@ Want me to generate a `db.json` starter file again too?
 
 
 
-Ask ChatGPT
+
+
+
 
