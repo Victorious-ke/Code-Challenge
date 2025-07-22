@@ -34,20 +34,10 @@ document.addEventListener("DOMContentLoaded", () => {
       paye = 2400 + (8333 * 0.25) + (taxableIncome - 32333) * 0.3;
     }
 
-    // sha calculatiobs
-    let sha = 0;
-    if (grossSalary <= 5999) nhif = 150;
-    else if (grossSalary <= 7999) sha = 300;
-    else if (grossSalary <= 11999) sha = 400;
-    else if (grossSalary <= 14999) sha = 500;
-    else if (grossSalary <= 19999) sha = 600;
-    else if (grossSalary <= 24999) sha = 750;
-    else if (grossSalary <= 29999) sha = 850;
-    else if (grossSalary <= 34999) sha = 900;
-    else if (grossSalary <= 39999) sha = 950;
-    else if (grossSalary <= 44999) sha = 1000;
-    else if (grossSalary <= 49999) sha = 1100;
-    else sha = 1200;
+    // shif calculatiobs
+    
+    let sha = grossSalary * 0.0275;
+
 
     const netPay = grossSalary - nssf - nhdf - paye - sha;
 
