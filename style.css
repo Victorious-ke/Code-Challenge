@@ -82,7 +82,8 @@ input[type="submit"]:hover {
 #output {
   margin-top: 10px;
   padding: 10px;
-  max-width: 600px
+  max-width: 600px;
+  display: block
 }
 
 table {
