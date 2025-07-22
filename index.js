@@ -15,13 +15,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const inputs = form.querySelectorAll("input[type='number']");
     const basicSalary = Number(inputs[0].value);
     const benefits = Number(inputs[1].value);
-
+      // gross salary
     const grossSalary = basicSalary + benefits;
-
+         
+    // nssf
     let nssf = grossSalary * 0.06;
     if (nssf > 1080) nssf = 1080;
 
+    // nhdf
     const nhdf = grossSalary * 0.015;
+
+  //  taxable salary
     const taxableIncome = grossSalary - nssf - nhdf;
 
     // PAYE bands
@@ -38,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     let shif = grossSalary * 0.0275;
 
-
+    // net pay
     const netPay = grossSalary - nssf - nhdf - paye - shif;
 
     // Display results

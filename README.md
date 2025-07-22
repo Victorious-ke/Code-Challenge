@@ -42,12 +42,12 @@ Fetch API (GET and POST methods)
 1. Clone the Repository
 git clone https://github.com/Victorious-ke/Code-Challenge.git
 
-cd Code-Challenge
+2. cd Code-Challenge
 
-2. Install Dependencies
+3. Install Dependencies
 npm install json-server
 
-3. Start JSON Server
+4. Start JSON Server
 npm start
 
 
