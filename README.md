@@ -52,9 +52,7 @@ npm start
 
 
 ## Live Demo (Optional)
-If deployed using Render:
-
-View Live API
+ https://code-challenge-hl0k.onrender.com
 
 ## Usage
 1. Enter your Basic Salary and Benefits
