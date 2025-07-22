@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const nhdfEl = document.getElementById("nhdf");
   const taxableIncomeEl = document.getElementById("taxable_income");
   const finalPayeeEl = document.getElementById("final_payee");
-  const nhifEl = document.getElementById("sha");
+  const shifEl = document.getElementById("shif");
   const netPayEl = document.getElementById("net_pay");
 
   form.addEventListener("submit", (e) => {
@@ -36,10 +36,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // shif calculatiobs
     
-    let sha = grossSalary * 0.0275;
+    let shif = grossSalary * 0.0275;
 
 
-    const netPay = grossSalary - nssf - nhdf - paye - sha;
+    const netPay = grossSalary - nssf - nhdf - paye - shif;
 
     // Display results
     grossEl.textContent = grossSalary.toFixed(2);
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
     nhdfEl.textContent = nhdf.toFixed(2);
     taxableIncomeEl.textContent = taxableIncome.toFixed(2);
     finalPayeeEl.textContent = paye.toFixed(2);
-    nhifEl.textContent = nhif.toFixed(2);
+    shifEl.textContent = shif.toFixed(2);
     netPayEl.textContent = netPay.toFixed(2);
 
     // Save to json-server
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
       nssf,
       nhdf,
       paye,
-      sha
+      shif
     };
 
     fetch("http://localhost:3000/salaryRecords", {
