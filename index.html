@@ -19,8 +19,10 @@
         <label for="basic_salary">Basic Salary</label>
         <input type="number" />
         <label for="benefits">Benefits</label>
-        <input type="number" />
-        <input type="submit" value="calculate">
+        <input type="number" id="benefitsInput" />
+        <p id="benefitsPreview" style="font-weight: bold; color: green;">Preview: KES 0.00</p>
+<input type="submit" value="Calculate">
+
       </form>
     </div>
     <p id="grossPreview" style="font-weight: bold; color: green;"></p>
@@ -65,7 +67,7 @@
       <h2>Saved Salary Records</h2>
       <ul id="recordsList"></ul>
     </div>
-    
+
 
   </main>
   <script src="index.js"></script>
