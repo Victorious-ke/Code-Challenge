@@ -44,6 +44,24 @@
       "nhdf": 150,
       "paye": 925,
       "shif": 275
+    },
+    {
+      "id": "110d",
+      "grossSalary": 100000,
+      "netPay": 70660.65,
+      "nssf": 1080,
+      "nhdf": 1500,
+      "paye": 24009.35,
+      "shif": 2750
+    },
+    {
+      "id": "6c40",
+      "grossSalary": 10000,
+      "netPay": 8050,
+      "nssf": 600,
+      "nhdf": 150,
+      "paye": 925,
+      "shif": 275
     }
   ],
   "users": [

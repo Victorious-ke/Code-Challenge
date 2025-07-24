@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const basicSalaryInput = form.querySelector("input[type='number']:nth-child(2)");
   const benefitsInput = form.querySelector("input[type='number']:nth-child(4)");
 
-  //  Input Event for Live Gross Preview
+  // ✅ Input Event for Live Gross Preview
   [basicSalaryInput, benefitsInput].forEach(input => {
     input.addEventListener("input", () => {
       const basic = Number(basicSalaryInput.value);
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  //  Submit event
+  // 🔄 Submit event
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -33,12 +33,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const benefits = Number(benefitsInput.value);
 
     const grossSalary = basicSalary + benefits;
-    
-    //  nssf
+
     let nssf = grossSalary * 0.06;
     if (nssf > 1080) nssf = 1080;
 
-    // nhdf
     const nhdf = grossSalary * 0.015;
     const taxableIncome = grossSalary - nssf - nhdf;
 
@@ -52,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
       paye = 2400 + (8333 * 0.25) + (taxableIncome - 32333) * 0.3;
     }
 
-    // SHIF 
+    // SHIF (27.5%)
     const shif = grossSalary * 0.0275;
 
     const netPay = grossSalary - nssf - nhdf - paye - shif;
@@ -110,6 +108,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-
+  // Load records on page load
   loadSalaryRecords();
 });
