@@ -9,25 +9,37 @@ document.addEventListener("DOMContentLoaded", () => {
   const shifEl = document.getElementById("shif");
   const netPayEl = document.getElementById("net_pay");
   const resetBtnE1 = document.getElementById("resetBtn");
+  const grossPreview = document.getElementById("grossPreview");
 
+  const basicSalaryInput = form.querySelector("input[type='number']:nth-child(2)");
+  const benefitsInput = form.querySelector("input[type='number']:nth-child(4)");
+
+  //  Input Event for Live Gross Preview
+  [basicSalaryInput, benefitsInput].forEach(input => {
+    input.addEventListener("input", () => {
+      const basic = Number(basicSalaryInput.value);
+      const benefits = Number(benefitsInput.value);
+      const gross = basic + benefits;
+
+      grossPreview.textContent = isNaN(gross) ? "" : `Preview Gross Salary: KES ${gross.toFixed(2)}`;
+    });
+  });
+
+  //  Submit event
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const inputs = form.querySelectorAll("input[type='number']");
-    const basicSalary = Number(inputs[0].value);
-    const benefits = Number(inputs[1].value);
-    
-      // gross salary
+    const basicSalary = Number(basicSalaryInput.value);
+    const benefits = Number(benefitsInput.value);
+
     const grossSalary = basicSalary + benefits;
-         
-    // nssf
+    
+    //  nssf
     let nssf = grossSalary * 0.06;
     if (nssf > 1080) nssf = 1080;
 
     // nhdf
     const nhdf = grossSalary * 0.015;
-
-  //  taxable salary
     const taxableIncome = grossSalary - nssf - nhdf;
 
     // PAYE bands
@@ -40,11 +52,9 @@ document.addEventListener("DOMContentLoaded", () => {
       paye = 2400 + (8333 * 0.25) + (taxableIncome - 32333) * 0.3;
     }
 
-    // shif calculatiobs
-    
-    let shif = grossSalary * 0.0275;
+    // SHIF 
+    const shif = grossSalary * 0.0275;
 
-    // net pay
     const netPay = grossSalary - nssf - nhdf - paye - shif;
 
     // Display results
@@ -70,8 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(record)
-    })
-      .then(() => loadSalaryRecords());
+    }).then(() => loadSalaryRecords());
   });
 
   function loadSalaryRecords() {
@@ -91,6 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   }
 
+  // Delete individual record
   recordsList.addEventListener("click", (e) => {
     if (e.target.classList.contains("delete-btn")) {
       const id = e.target.dataset.id;
@@ -100,6 +110,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Load on page load
+
   loadSalaryRecords();
 });
