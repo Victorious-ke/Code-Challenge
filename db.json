@@ -1,33 +1,6 @@
 {
   "salaryRecords": [
     {
-      "id": "037f",
-      "grossSalary": 1000000,
-      "netPay": 692760.65,
-      "nssf": 1080,
-      "nhdf": 15000,
-      "paye": 289959.35,
-      "nhif": 1200
-    },
-    {
-      "id": "f0b5",
-      "grossSalary": 1000000,
-      "netPay": 692760.65,
-      "nssf": 1080,
-      "nhdf": 15000,
-      "paye": 289959.35,
-      "nhif": 1200
-    },
-    {
-      "id": "b173",
-      "grossSalary": 1000000,
-      "netPay": 666460.65,
-      "nssf": 1080,
-      "nhdf": 15000,
-      "paye": 289959.35,
-      "shif": 27500
-    },
-    {
       "id": "68e3",
       "grossSalary": 12230000,
       "netPay": 8100720.65,

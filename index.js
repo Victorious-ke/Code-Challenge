@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const finalPayeeEl = document.getElementById("final_payee");
   const shifEl = document.getElementById("shif");
   const netPayEl = document.getElementById("net_pay");
+  const resetBtnE1 = document.getElementById("resetBtn");
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
