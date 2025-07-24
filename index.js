@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("my_form");
   const recordsList = document.getElementById("recordsList");
+
+  
   const grossEl = document.getElementById("gross");
   const nssfEl = document.getElementById("nssf");
   const nhdfEl = document.getElementById("nhdf");
@@ -8,31 +10,37 @@ document.addEventListener("DOMContentLoaded", () => {
   const finalPayeeEl = document.getElementById("final_payee");
   const shifEl = document.getElementById("shif");
   const netPayEl = document.getElementById("net_pay");
-  const resetBtnEl = document.getElementById("resetBtn");
+
+  
+  const basicSalaryInput = document.getElementById("basicInput");
+  const benefitsInput = document.getElementById("benefitsInput");
+
+  // Preview gross  and benefits
   const grossPreview = document.getElementById("grossPreview");
   const benefitsPreview = document.getElementById("benefitsPreview");
 
-  const basicSalaryInput = form.querySelector("input[name='basic']");
-  const benefitsInput = form.querySelector("input[name='benefits']");
-
-  // Input Event: Live Benefits & Gross Preview
+  
   [basicSalaryInput, benefitsInput].forEach(input => {
     input.addEventListener("input", () => {
       const basic = Number(basicSalaryInput.value);
       const benefits = Number(benefitsInput.value);
+
+      if (!isNaN(benefits) && benefits > 0) {
+        benefitsPreview.textContent = `Preview Benefits: KES ${benefits.toFixed(2)}`;
+      } else {
+        benefitsPreview.textContent = "";
+      }
+
       const gross = basic + benefits;
-
-      benefitsPreview.textContent = isNaN(benefits) || benefits === 0
-        ? ""
-        : `Preview Benefits: KES ${benefits.toFixed(2)}`;
-
-      grossPreview.textContent = isNaN(gross) || gross === 0
-        ? ""
-        : `Preview Gross Salary: KES ${gross.toFixed(2)}`;
+      if (!isNaN(gross) && gross > 0) {
+        grossPreview.textContent = `Preview Gross Salary: KES ${gross.toFixed(2)}`;
+      } else {
+        grossPreview.textContent = "";
+      }
     });
   });
 
-  
+  // Form submission
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -40,13 +48,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const benefits = Number(benefitsInput.value);
     const grossSalary = basicSalary + benefits;
 
+    // NSSF
     let nssf = grossSalary * 0.06;
     if (nssf > 1080) nssf = 1080;
 
+    // NHDF (Housing Levy)
     const nhdf = grossSalary * 0.015;
+
+    // Taxable Income
     const taxableIncome = grossSalary - nssf - nhdf;
 
-    // PAYE calculation
+    // PAYE bands
     let paye = 0;
     if (taxableIncome <= 24000) {
       paye = taxableIncome * 0.1;
@@ -56,12 +68,13 @@ document.addEventListener("DOMContentLoaded", () => {
       paye = 2400 + (8333 * 0.25) + (taxableIncome - 32333) * 0.3;
     }
 
-    // SHIF
+    // SHIF 
     const shif = grossSalary * 0.0275;
 
     // Net Pay
     const netPay = grossSalary - nssf - nhdf - paye - shif;
 
+    // Display results
     grossEl.textContent = grossSalary.toFixed(2);
     nssfEl.textContent = nssf.toFixed(2);
     nhdfEl.textContent = nhdf.toFixed(2);
@@ -87,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }).then(() => loadSalaryRecords());
   });
 
-  // Load records
+  // Load all saved salary records
   function loadSalaryRecords() {
     fetch("http://localhost:3000/salaryRecords")
       .then(res => res.json())
@@ -105,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   }
 
-  // Delete record
+  // Delete a record
   recordsList.addEventListener("click", (e) => {
     if (e.target.classList.contains("delete-btn")) {
       const id = e.target.dataset.id;

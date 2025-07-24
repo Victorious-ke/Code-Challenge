@@ -62,6 +62,24 @@
       "nhdf": 150,
       "paye": 925,
       "shif": 275
+    },
+    {
+      "id": "234a",
+      "grossSalary": 10000,
+      "netPay": 8050,
+      "nssf": 600,
+      "nhdf": 150,
+      "paye": 925,
+      "shif": 275
+    },
+    {
+      "id": "7950",
+      "grossSalary": 99999,
+      "netPay": 70659.988,
+      "nssf": 1080,
+      "nhdf": 1499.985,
+      "paye": 24009.0545,
+      "shif": 2749.9725
     }
   ],
   "users": [
