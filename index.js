@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const inputs = form.querySelectorAll("input[type='number']");
     const basicSalary = Number(inputs[0].value);
     const benefits = Number(inputs[1].value);
+    
       // gross salary
     const grossSalary = basicSalary + benefits;
          
