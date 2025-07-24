@@ -1,33 +1,6 @@
 {
   "salaryRecords": [
     {
-      "id": "68e3",
-      "grossSalary": 12230000,
-      "netPay": 8100720.65,
-      "nssf": 1080,
-      "nhdf": 183450,
-      "paye": 3608424.35,
-      "shif": 336325
-    },
-    {
-      "id": "3f79",
-      "grossSalary": 1000000,
-      "netPay": 666460.65,
-      "nssf": 1080,
-      "nhdf": 15000,
-      "paye": 289959.35,
-      "shif": 27500
-    },
-    {
-      "id": "806c",
-      "grossSalary": 120000,
-      "netPay": 83900.65,
-      "nssf": 1080,
-      "nhdf": 1800,
-      "paye": 29919.35,
-      "shif": 3300
-    },
-    {
       "id": "2d55",
       "grossSalary": 1000000,
       "netPay": 666460.65,
@@ -80,6 +53,15 @@
       "nhdf": 1499.985,
       "paye": 24009.0545,
       "shif": 2749.9725
+    },
+    {
+      "id": "b141",
+      "grossSalary": 1000000,
+      "netPay": 666460.65,
+      "nssf": 1080,
+      "nhdf": 15000,
+      "paye": 289959.35,
+      "shif": 27500
     }
   ],
   "users": [

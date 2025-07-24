@@ -26,14 +26,14 @@ document.addEventListener("DOMContentLoaded", () => {
       const benefits = Number(benefitsInput.value);
 
       if (!isNaN(benefits) && benefits > 0) {
-        benefitsPreview.textContent = `Preview Benefits: KES ${benefits.toFixed(2)}`;
+        benefitsPreview.textContent = `Preview Benefits: KES ${Math.floor(benefits)}`;
       } else {
         benefitsPreview.textContent = "";
       }
 
       const gross = basic + benefits;
       if (!isNaN(gross) && gross > 0) {
-        grossPreview.textContent = `Preview Gross Salary: KES ${gross.toFixed(2)}`;
+        grossPreview.textContent = `Preview Gross Salary: KES ${Math.floor(gross)}`;
       } else {
         grossPreview.textContent = "";
       }
