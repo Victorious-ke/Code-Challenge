@@ -1,4 +1,6 @@
+// event 1 DomContentLoaded
 document.addEventListener("DOMContentLoaded", () => {
+
   const form = document.getElementById("my_form");
   const recordsList = document.getElementById("recordsList");
 
@@ -19,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const grossPreview = document.getElementById("grossPreview");
   const benefitsPreview = document.getElementById("benefitsPreview");
 
-
+    // live preview of gross salary and benefits user inputs
   [basicSalaryInput, benefitsInput].forEach(input => {
     input.addEventListener("input", () => {
       const basic = Number(basicSalaryInput.value);
@@ -40,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Form submission
+  // event submit Form submission
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -119,7 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   }
 
-  // Delete a record
+  // event click Delete a record
   recordsList.addEventListener("click", (e) => {
     if (e.target.classList.contains("delete-btn")) {
       const id = e.target.dataset.id;
