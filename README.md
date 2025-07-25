@@ -59,6 +59,7 @@ npm start
 2. Click Calculate
 
 3. View the breakdown of:
+
 Gross Pay
 
 Statutory Deductions

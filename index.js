@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let nssf = grossSalary * 0.06;
     if (nssf > 1080) nssf = 1080;
 
-    // NHDF (Housing Levy)
+    // NHDF 
     const nhdf = grossSalary * 0.015;
 
     // Taxable Income
