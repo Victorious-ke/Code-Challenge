@@ -112,23 +112,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }).then(() => loadSalaryRecords());
   });
 
-  // Load all saved salary records
+  // Load all saved salary records  .map
   function loadSalaryRecords() {
     fetch("http://localhost:3000/salaryRecords")
       .then(res => res.json())
       .then(records => {
-        recordsList.innerHTML = "";
-        records.forEach(record => {
-          const li = document.createElement("li");
-          li.innerHTML = `
-            <strong>Gross:</strong> KES ${Math.round(record.grossSalary)} 
-            <strong>Net Pay:</strong> KES ${Math.round(record.netPay)}
-            <button data-id="${record.id}" class="delete-btn">Delete</button>
-          `;
-          recordsList.appendChild(li);
-        });
+        recordsList.innerHTML = records.map(record => `
+        <li>
+          <strong>Gross:</strong> KES ${Math.round(record.grossSalary)} 
+          <strong>Net Pay:</strong> KES ${Math.round(record.netPay)}
+          <button data-id="${record.id}" class="delete-btn">Delete</button>
+        </li>
+      `).join("");
       });
   }
+
 
   // event 4: click Delete a record
   recordsList.addEventListener("click", (e) => {
