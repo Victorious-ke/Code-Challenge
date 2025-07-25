@@ -38,6 +38,7 @@ JavaScript
 JSON Server
 Fetch API (GET and POST methods)
 
+
 ## Setup Instructions
 1. Clone the Repository
 git clone https://github.com/Victorious-ke/Code-Challenge.git
@@ -54,6 +55,7 @@ npm start
 ## Live Demo 
  https://code-challenge-hl0k.onrender.com
 
+
 ## Usage
 1. Enter your Basic Salary and Benefits
 2. Click Calculate
@@ -66,13 +68,13 @@ Statutory Deductions
 
 Net Pay
 
-View all saved records under “Salary Records”
-
+View all records under “Salary Records”
 
 
 ## Author
 Victorious-ke
 GitHub: github.com/Victorious-ke
+
 
 ## License
 This project is licensed under the MIT License 
