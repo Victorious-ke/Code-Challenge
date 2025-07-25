@@ -1,15 +1,6 @@
 {
   "salaryRecords": [
     {
-      "id": "2d55",
-      "grossSalary": 1000000,
-      "netPay": 666460.65,
-      "nssf": 1080,
-      "nhdf": 15000,
-      "paye": 289959.35,
-      "shif": 27500
-    },
-    {
       "id": "99c3",
       "grossSalary": 10000,
       "netPay": 8050,
@@ -53,6 +44,15 @@
       "nhdf": 15000,
       "paye": 289959.35,
       "shif": 27500
+    },
+    {
+      "id": "3cd2",
+      "grossSalary": 1200000,
+      "netPay": 798860.65,
+      "nssf": 1080,
+      "nhdf": 18000,
+      "paye": 349059.35,
+      "shif": 33000
     }
   ],
   "users": [
