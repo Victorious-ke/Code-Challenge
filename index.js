@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("my_form");
   const recordsList = document.getElementById("recordsList");
 
-  
+
   const grossEl = document.getElementById("gross");
   const nssfEl = document.getElementById("nssf");
   const nhdfEl = document.getElementById("nhdf");
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const shifEl = document.getElementById("shif");
   const netPayEl = document.getElementById("net_pay");
 
-  
+
   const basicSalaryInput = document.getElementById("basicInput");
   const benefitsInput = document.getElementById("benefitsInput");
 
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const grossPreview = document.getElementById("grossPreview");
   const benefitsPreview = document.getElementById("benefitsPreview");
 
-  
+
   [basicSalaryInput, benefitsInput].forEach(input => {
     input.addEventListener("input", () => {
       const basic = Number(basicSalaryInput.value);
@@ -110,9 +110,9 @@ document.addEventListener("DOMContentLoaded", () => {
         records.forEach(record => {
           const li = document.createElement("li");
           li.innerHTML = `
-            <strong>Gross:</strong> KES ${record.grossSalary.toFixed(2)},
-            <strong>Net Pay:</strong> KES ${record.netPay.toFixed(2)}
-            <button data-id="${record.id}" class="delete-btn">Delete</button>
+          <strong>Gross:</strong> KES ${Math.round(record.grossSalary)} 
+          <strong>Net Pay:</strong> KES ${Math.round(record.netPay)}
+        <button data-id="${record.id}" class="delete-btn">Delete</button>
           `;
           recordsList.appendChild(li);
         });
