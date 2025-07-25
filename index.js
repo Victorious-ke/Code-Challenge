@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const calculateBtn = document.getElementById("calculateBtn");
   if (calculateBtn) {
     calculateBtn.addEventListener("mouseover", () => {
-      calculateBtn.style.backgroundColor = "#0a9396";
+      calculateBtn.style.backgroundColor = "#30e8ebff";
       calculateBtn.title = "Click to calculate salary";
     });
     calculateBtn.addEventListener("mouseout", () => {

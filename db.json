@@ -71,6 +71,24 @@
       "nhdf": 1500,
       "paye": 24009.35,
       "shif": 2750
+    },
+    {
+      "id": "d4a4",
+      "grossSalary": 100000,
+      "netPay": 70660.65,
+      "nssf": 1080,
+      "nhdf": 1500,
+      "paye": 24009.35,
+      "shif": 2750
+    },
+    {
+      "id": "eab6",
+      "grossSalary": 100000,
+      "netPay": 70660.65,
+      "nssf": 1080,
+      "nhdf": 1500,
+      "paye": 24009.35,
+      "shif": 2750
     }
   ],
   "users": [
