@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("my_form");
   const recordsList = document.getElementById("recordsList");
 
-
   const grossEl = document.getElementById("gross");
   const nssfEl = document.getElementById("nssf");
   const nhdfEl = document.getElementById("nhdf");
@@ -13,15 +12,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const shifEl = document.getElementById("shif");
   const netPayEl = document.getElementById("net_pay");
 
-
   const basicSalaryInput = document.getElementById("basicInput");
   const benefitsInput = document.getElementById("benefitsInput");
 
-  // Preview gross  and benefits
+  // Preview gross and benefits
   const grossPreview = document.getElementById("grossPreview");
   const benefitsPreview = document.getElementById("benefitsPreview");
 
-    // live preview of gross salary and benefits user inputs
+  // live preview of gross salary and benefits user inputs
   [basicSalaryInput, benefitsInput].forEach(input => {
     input.addEventListener("input", () => {
       const basic = Number(basicSalaryInput.value);
@@ -42,7 +40,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // event submit Form submission
+  // event 2: mouseover on Calculate button
+  const calculateBtn = document.getElementById("calculateBtn");
+  if (calculateBtn) {
+    calculateBtn.addEventListener("mouseover", () => {
+      calculateBtn.style.backgroundColor = "#0a9396";
+      calculateBtn.title = "Click to calculate salary";
+    });
+    calculateBtn.addEventListener("mouseout", () => {
+      calculateBtn.style.backgroundColor = ""; // reset to original
+    });
+  }
+
+  // event 3: submit Form submission
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -77,7 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const netPay = grossSalary - nssf - nhdf - paye - shif;
 
     // Display results
-
     grossEl.textContent = Math.floor(grossSalary);
     nssfEl.textContent = Math.floor(nssf);
     nhdfEl.textContent = Math.floor(nhdf);
@@ -112,16 +121,16 @@ document.addEventListener("DOMContentLoaded", () => {
         records.forEach(record => {
           const li = document.createElement("li");
           li.innerHTML = `
-          <strong>Gross:</strong> KES ${Math.round(record.grossSalary)} 
-          <strong>Net Pay:</strong> KES ${Math.round(record.netPay)}
-        <button data-id="${record.id}" class="delete-btn">Delete</button>
+            <strong>Gross:</strong> KES ${Math.round(record.grossSalary)} 
+            <strong>Net Pay:</strong> KES ${Math.round(record.netPay)}
+            <button data-id="${record.id}" class="delete-btn">Delete</button>
           `;
           recordsList.appendChild(li);
         });
       });
   }
 
-  // event click Delete a record
+  // event 4: click Delete a record
   recordsList.addEventListener("click", (e) => {
     if (e.target.classList.contains("delete-btn")) {
       const id = e.target.dataset.id;

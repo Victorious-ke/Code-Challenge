@@ -5,14 +5,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="assets/favicon.png"  />
+  <link rel="icon" href="assets/favicon.png" />
 
   <title>Paye Calculator</title>
 </head>
 
 <body>
   <main>
-    <h1 id="brand"><img src="assets/brandicon.svg" alt="Brand Icon" style="width: 28px; height: 28px;"> Victorious Calculator</h1>
+    <h1 id="brand">
+      <img src="assets/brandicon.svg" alt="Brand Icon" style="width: 28px; height: 28px;">
+      Victorious Calculator
+    </h1>
     <h2 id="def">NET PAY CALCULATOR</h2>
     <p>Enter basic salary and benefits to calculate your net salary</p>
 
@@ -25,13 +28,14 @@
         <input type="number" id="benefitsInput" name="benefits" required />
 
         <!-- benefits input preview -->
-
         <p id="benefitsPreview" style="font-weight: bold; color: green;"></p>
 
-        <input type="submit" value="Calculate" />
+        <!-- ✅ Added id="calculateBtn" -->
+        <input type="submit" id="calculateBtn" value="Calculate" />
       </form>
     </div>
- <!-- gross pay input preview -->
+
+    <!-- gross pay input preview -->
     <p id="grossPreview" style="font-weight: bold; color: green;"></p>
 
     <div id="output">
@@ -71,7 +75,7 @@
       </table>
     </div>
 
-    <div id="salary-records" >
+    <div id="salary-records">
       <h2 style="color: blue; font: 1em sans-serif;">Saved Salary Records</h2>
       <ul id="recordsList"></ul>
     </div>
