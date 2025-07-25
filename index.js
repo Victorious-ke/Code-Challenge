@@ -75,13 +75,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const netPay = grossSalary - nssf - nhdf - paye - shif;
 
     // Display results
-    grossEl.textContent = grossSalary.toFixed(2);
-    nssfEl.textContent = nssf.toFixed(2);
-    nhdfEl.textContent = nhdf.toFixed(2);
-    taxableIncomeEl.textContent = taxableIncome.toFixed(2);
-    finalPayeeEl.textContent = paye.toFixed(2);
-    shifEl.textContent = shif.toFixed(2);
-    netPayEl.textContent = netPay.toFixed(2);
+
+    grossEl.textContent = Math.floor(grossSalary);
+    nssfEl.textContent = Math.floor(nssf);
+    nhdfEl.textContent = Math.floor(nhdf);
+    taxableIncomeEl.textContent = Math.floor(taxableIncome);
+    finalPayeeEl.textContent = Math.floor(paye);
+    shifEl.textContent = Math.floor(shif);
+    netPayEl.textContent = Math.floor(netPay);
 
     // Save record
     const record = {
